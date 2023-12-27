@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main_box {
+  position: relative;
+  background: url(img/kopi.jpg) right no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.main_box .sidebar_menu {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  height: 100vh;
+  width: 280px;
+  left: -300px;
+  transition: all 0.3s ease;
+}
+.sidebar_menu .logo {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.9);
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  cursor: pointer;
+}
+.sidebar_menu .menu {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+.menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+  transition: all 0.3s linear;
+}
+.menu li:hover {
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+.menu i {
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.sidebar_menu .social_media {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.social_media i {
+  color: #fff;
+  padding: 0 5px;
+  font-size: 20px;
+  opacity: 0.6;
+}
+.social_media i:hover {
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+#check {
+  display: none;
+}
+.main_box .btn_one i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.main_box .btn_one i:hover {
+  font-size: 29px;
+}
+.sidebar_menu .btn_two i:hover {
+  font-size: 24px;
+}
+.sidebar_menu .btn_two i {
+  font-size: 25px;
+  position: absolute;
+  left: 250px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i {
+  opacity: 1;
+}
